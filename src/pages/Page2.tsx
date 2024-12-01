@@ -21,7 +21,7 @@ const Page2 = ({
     if (readmeText) {
       try {
         const html = marked(readmeText); // Convert markdown to HTML
-        setHtmlContent(html); // Update the HTML content with the latest markdown
+        setHtmlContent(html.toString()); // Update the HTML content with the latest markdown
       } catch (error) {
         console.error("Error parsing markdown:", error);
         setHtmlContent("<p>Error processing markdown content</p>");
@@ -64,7 +64,7 @@ const Page2 = ({
         });
 
         try {
-          await Promise.allSettled([generateBuzzwords, generateLogo, generateReadmeText]);
+          await Promise.allSettled([generateBuzzwords, generateReadmeText]);
         } catch (error) {
           console.error("Error generating content:", error);
         }

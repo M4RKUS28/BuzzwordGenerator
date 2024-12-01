@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:11434/api/generate";
+const API_URL = "http://home.obermui.de:11434/api/generate";
 
 
 export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpdate }) => {
@@ -8,9 +8,9 @@ export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpda
     body: JSON.stringify({ 
       model, 
       prompt,
-      parameters: {
-        mirostat: 2,  // Setzt Mirostat auf 2 für stabilere, kohärentere Textgenerierung
-      },
+       parameters: {
+    mirostat: 2,  // Setzt Mirostat auf 2 für stabilere, kohärentere Textgenerierung
+  },
       stream }),
   });
 
