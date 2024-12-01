@@ -1,0 +1,27 @@
+/* Hero Section Styling */
+.hero {
+    background: linear-gradient(to bottom, #5d5f71, #2a2d34); /* Gradient background */
+    color: white;
+    padding: 50px 20px; /* Padding around the content */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Indicate it's clickable */
+    box-sizing: border-box; /* Make sure padding doesn't overflow */
+    transition: background 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .hero:hover {
+    background: linear-gradient(to bottom, #4a4d58, #1f2327); /* Darker gradient on hover */
+  }
+  
+  .hero h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+    font-weight: bold; /* Make title bold */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .hero p {
+    font-size: 1.2em; /* Medium font size for the description */
+    margin-top: 10px; /* Space between title and description */
+    font-weight: 400; /* Regular font weight for the description */
+  }
+  

@@ -1,10 +1,17 @@
 const API_URL = "http://localhost:11434/api/generate";
 
+
 export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpdate }) => {
   const response = await fetch(API_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ model, prompt, stream }),
+    body: JSON.stringify({ 
+      model, 
+      prompt,
+      parameters: {
+        mirostat: 2,  // Setzt Mirostat auf 2 für stabilere, kohärentere Textgenerierung
+      },
+      stream }),
   });
 
   if (!response.body) {
@@ -16,6 +23,8 @@ export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpda
   let result = "";  // To accumulate the raw response (non-JSON and JSON parts)
   let jsonBuffer = ""; // Temporary buffer for incomplete JSON data
   let responses = []; // Array to store individual responses from the JSON
+
+  console.log("RUN: " + prompt);
 
   // Read the stream in chunks
   while (true) {
@@ -56,9 +65,11 @@ export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpda
       console.error("Error parsing stream data:", error);
     }
   }
+  console.log("return: " + responses);
 
   // Return the final accumulated result (both raw and response data)
   return {
+
     result,           // All the raw content accumulated (both JSON and non-JSON)
     responses,        // All the parsed responses collected
   };

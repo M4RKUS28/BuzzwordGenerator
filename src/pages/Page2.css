@@ -1,57 +1,238 @@
+/* General page styling */
 .page2 {
-    padding: 20px;
-    background-color: #f9f9f9;
-    max-width: 800px;
-    margin: auto;
     font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+    color: #333;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 28px; /* Rounded corners */
+    margin-bottom: 90px;
   }
   
-  h1, h2 {
-    color: #333;
+/* For the header element */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #4CAF50; /* Add a background color */
+    color: white;
+    font-size: 3rem;
+    cursor: pointer; /* Indicate that it's clickable */
+    box-sizing: border-box;
+  }
+  
+.header:hover {
+background-color: #45a049; /* Change color on hover */
+}
+
+.header h1 {
+margin: 0; /* Remove margin around the header text */
+}
+
+  
+  /* Logo container */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .placeholder-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    display: block;
+    min-height: 100px;
+  }
+  
+/* Styling for Buzzwords */
+/* Styling for the buzzwords container */
+.buzzwords {
+    padding: 20px;
+  }
+  
+  .buzzwords h2 {
+    font-size: 2rem;
+  }
+  
+  /* Styling for the list of buzzwords */
+  .buzzwords-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    justify-content: flex-start; /* Align items to the left */
+  }
+  
+  /* Styling for each buzzword item */
+/* Styling for the buzzwords container */
+.buzzwords {
+    padding: 20px;
+  }
+  
+  .buzzwords h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for the list of buzzwords */
+  .buzzwords-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between items */
+    justify-content: flex-start; /* Align items to the left */
+  }
+  
+/* Styling for the buzzwords container */
+/* Styling for the buzzwords container */
+/* Container for buzzwords */
+.buzzwords {
+    padding: 20px;
     text-align: center;
   }
   
-  .description,
-  .buzzwords,
+  .buzzwords h2 {
+    font-size: 2rem;
+  }
+  
+  /* Container for individual buzzword divs */
+  .buzzwords-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid with at least 150px width per item */
+    gap: 30px; /* Space between each buzzword */
+    justify-items: center; /* Center items in the grid cell */
+    min-height: 200px;
+    margin: auto;
+    overflow:scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;;
+
+  }
+  
+  .tite {
+    color: blue;
+    font-size: 40px;
+  }
+  /* Styling for each buzzword item */
+  .buzzword-item {
+    background-color: #4caf50; /* Default color if no dynamic color is applied */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center; /* Center text inside the div */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap; /* Prevent text from breaking into multiple lines */
+    overflow: hidden; /* Hide text that overflows */
+    min-width: 120px; /* Minimum width to avoid too small buzzword items */
+    height: 18px;
+  }
+  
+  /* Hover effect for each buzzword */
+  .buzzword-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Active effect for each buzzword */
+  .buzzword-item:active {
+    transform: scale(0.95);
+  }
+  
+
+
+  /* Responsive adjustment for very small screens */
+  @media (max-width: 600px) {
+    .page2 .buzzwords li {
+      font-size: 0.9em; /* Adjust font size on small screens */
+      padding: 8px 15px; /* Reduce padding */
+      min-width: auto; /* Allow buzzwords to take more natural space */
+    }
+  }
+  
+  
+  /* Readme section */
   .readme {
-    margin-bottom: 30px;
+    margin-top: 30px;
   }
   
-  .readme-content {
+  .readme h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .readme-markdown {
+    background-color: #ffffff;
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" monospace;
+    font-size: 16px;
+    text-align: left;
   }
   
-  .readme-content h1, .readme-content h2, .readme-content h3 {
-    color: #444;
+  /* Button styling */
+  .actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
   }
   
-  .readme-content ul {
-    list-style-type: square;
-    margin-left: 20px;
+  .copy-button, .download-button, .back-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex: 1;
   }
   
-  .readme-content code {
-    background-color: #f5f5f5;
-    padding: 0.2em 0.4em;
-    border-radius: 4px;
+  .copy-button:hover, .download-button:hover {
+    background-color: #45a049;
   }
   
-  .readme-content pre {
-    background-color: #f5f5f5;
-    padding: 10px;
-    border-radius: 4px;
-    overflow-x: auto;
+  /* Focus on copy-button when copied */
+  .copy-button:focus {
+    outline: none;
   }
   
-  .readme-content a {
-    color: #0066cc;
-    text-decoration: none;
+  .copy-button:active {
+    background-color: #388e3c; /* Darker green when clicked */
   }
   
-  .readme-content a:hover {
-    text-decoration: underline;
+  /* Styling the download button */
+  .download-button {
+    background-color: #00796b;
   }
   
+  .download-button:hover {
+    background-color: #004d40;
+  }
+  
+
+  .back-button {
+    background-color: #949494;
+
+  } 
+  
+  .back-button:hover {
+    background-color: #616161;
+
+  }

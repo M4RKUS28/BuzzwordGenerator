@@ -11,29 +11,106 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+  width: 100%;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  max-width: 999999px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
 }
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+/* Page Layout */
+.page2 {
+  padding: 20px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+
+/* Logo Container */
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.placeholder-logo {
+  width: 150px;
+  height: 150px;
+}
+
+/* Buzzwords List */
+.buzzwords-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.buzzword-item {
+  background-color: #f0f0f0;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy-button,
+.download-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.copy-button:hover,
+.download-button:hover {
+  background-color: #218838;
+}
+
+.back-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #c82333;
+}
+
 
 button {
   border-radius: 8px;
@@ -66,3 +143,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
