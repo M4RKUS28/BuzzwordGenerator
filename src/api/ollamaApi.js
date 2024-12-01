@@ -1,4 +1,4 @@
-const API_URL = "http://home.obermui.de:11434/api/generate";
+const API_URL = "http://31.209.163.42:11434/api/generate";
 
 
 export const fetchOllamaResponse = async ({ model, prompt, stream = true, onUpdate }) => {
